@@ -1,0 +1,20 @@
+Node *removeDuplicates(Node *head)
+{
+    if(head==NULL || head->next==NULL)
+        return head;
+    Node *temp = head;
+	while(temp->next != NULL && temp != NULL)
+    {
+		//Duplicate Found
+		if(temp->data == temp->next->data){
+			//DUplicate Removed
+			temp -> next = temp ->next ->next;
+		}
+		else{
+			//No Duplicate Present
+			temp = temp->next;
+		}
+	}
+	//Return Head
+	return head;
+}
