@@ -1,0 +1,12 @@
+
+int length(Node *head)
+{
+     int count = 0; // Initialize count  
+    Node* temp = head; // Initialize temp  
+    while (temp != NULL)  
+    {  
+        count++;  
+        temp = temp->next;  
+    }  
+    return count;   //Write your code here
+}
